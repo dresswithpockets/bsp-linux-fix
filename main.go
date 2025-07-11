@@ -73,7 +73,6 @@ func main() {
 		fmt.Printf("Step 1: %s\n", fullItemPath)
 
 		command := exec.Command("vpkeditcli", fullItemPath, "-o", intermediateDir, "--add-file", fixFileName, vpkFixFilePath)
-		command.Stdout = os.Stdout
 		command.Stderr = os.Stderr
 
 		if err := command.Run(); err != nil {
@@ -92,7 +91,6 @@ func main() {
 		fmt.Printf("Step 2: %s\n", fullItemPath)
 
 		command := exec.Command("vpkeditcli", fullItemPath, "-o", outputDirectory, "--remove-file", vpkFixFilePath)
-		command.Stdout = os.Stdout
 		command.Stderr = os.Stderr
 
 		if err := command.Run(); err != nil {
