@@ -1,6 +1,6 @@
 # bsp-linux-fix
 
-Patches source engine maps to fix missing textures.
+Patches source engine maps to fix missing models & textures on linux.
 
 Sometimes TF2 maps will present with missing textures when played on linux, but not on windows. This is usually because file system case sensitivity on linux. The mapper packed assets which have non-lowercase characters in their paths, into the map. TF2 doesn't handle these correctly, and won't be able to find the correct model or texture as a result.
 
@@ -22,7 +22,7 @@ Put all the BSPs you wanna patch into a folder, then invoke `bsp-linux-fix` with
 ./bsp-linux-fix inputDir outputDir
 ```
 
-All patched BSPs will be in the `outputDir` directory.
+All patched BSPs will be in the `outputDir` directory. The patched map must exist on any servers you plan on joining. You can play patched maps locally just fine though!
 
 Example output:
 ```
