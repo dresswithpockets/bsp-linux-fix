@@ -88,7 +88,7 @@ func main() {
 
 		fullItemPath := filepath.Join(inputDirectory, item.Name())
 
-		fmt.Printf("Step 1: %s\n", fullItemPath)
+		fmt.Printf("Step 1: %s -> %s\n", fullItemPath, intermediateDir)
 
 		command := exec.Command("vpkeditcli", fullItemPath, "-o", intermediateDir, "--add-file", fixFileName, vpkFixFilePath)
 		command.Stderr = os.Stderr
@@ -106,7 +106,7 @@ func main() {
 	for _, item := range items {
 		fullItemPath := filepath.Join(intermediateDir, item.Name())
 
-		fmt.Printf("Step 2: %s\n", fullItemPath)
+		fmt.Printf("Step 2: %s -> %s\n", fullItemPath, outputDirectory)
 
 		command := exec.Command("vpkeditcli", fullItemPath, "-o", outputDirectory, "--remove-file", vpkFixFilePath)
 		command.Stderr = os.Stderr
