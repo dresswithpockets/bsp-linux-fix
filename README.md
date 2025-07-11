@@ -50,3 +50,11 @@ Step 2: /tmp/bsplinuxfix_intermediate2616446669/jump_redplanet_v2_fixed.bsp
 Step 2: /tmp/bsplinuxfix_intermediate2616446669/jump_sketchy_final.bsp
 Step 2: /tmp/bsplinuxfix_intermediate2616446669/jump_tissue.bsp
 ```
+
+## Credits
+
+Thanks to https://github.com/spiritov for the idea, and for experimenting on the implementation with me.
+
+Thanks to https://github.com/craftablescience for her tool [VPKEdit](https://github.com/craftablescience/VPKEdit).
+
+Thanks to valve for making a really buggy game.
