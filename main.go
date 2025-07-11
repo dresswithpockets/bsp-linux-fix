@@ -21,6 +21,24 @@ func main() {
 	inputDirectory := os.Args[1]
 	outputDirectory := os.Args[2]
 
+	_, outputStatErr := os.Stat(outputDirectory)
+	if outputStatErr != nil && !os.IsNotExist(outputStatErr) {
+		panic(outputStatErr)
+	}
+
+	if outputStatErr == nil {
+		outputDirEntries, outputDirErr := os.ReadDir(outputDirectory)
+		if outputDirErr != nil {
+			panic(outputDirErr)
+		}
+
+		if len(outputDirEntries) > 0 {
+			fmt.Printf("Output path `%s` must be empty.\n", outputDirectory)
+			os.Exit(1)
+			return
+		}
+	}
+
 	cleanOutputErr := os.RemoveAll(outputDirectory)
 	if cleanOutputErr != nil && !os.IsNotExist(cleanOutputErr) {
 		panic(cleanOutputErr)
