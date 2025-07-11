@@ -50,16 +50,6 @@ func main() {
 
 	defer os.RemoveAll(intermediateDir)
 
-	// _, statErr := os.Stat(fixFile.Name())
-	// if statErr != nil {
-	// 	panic(statErr)
-	// }
-
-	// _, statErr = os.Stat(intermediateDir)
-	// if statErr != nil {
-	// 	panic(statErr)
-	// }
-
 	fixFileName := fixFile.Name()
 	vpkFixFilePath := fmt.Sprintf("%s.txt", filepath.Base(fixFileName))
 
