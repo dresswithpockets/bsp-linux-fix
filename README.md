@@ -6,6 +6,8 @@ Sometimes TF2 maps will present with missing textures when played on linux, but 
 
 ## Usage
 
+You must have [`vpkeditcli`](https://github.com/craftablescience/VPKEdit) v4.4 or higher available on path. If you're on linux, your package manager may already have a distribution of it.
+
 Compilation requires Go 1.24 or higher:
 
 ```sh
